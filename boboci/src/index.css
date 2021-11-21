@@ -1,0 +1,87 @@
+.container_human{
+  display: grid;
+  height: 100vh;
+  border: 1px black solid;
+  /*grid-template-columns: 1fr 1fr 1fr;*/
+  /*grid-template-rows: 1fr 1fr 1fr;*/
+  grid-template-areas:"one two three four" "five five five five"
+}
+.lady_color{
+  background-color: pink;
+  transition: outline-width 1s ease-in;
+  outline: black 0px solid;
+  cursor: se-resize;
+}
+.lady_color:active{
+  outline: black 10px solid;
+}
+.one{
+  grid-area: one;
+}
+.two{
+  grid-area: two;
+}
+.three{
+  grid-area: three;
+}
+.four{
+  grid-area: four;
+}
+.gentleman_color{
+  background: linear-gradient(150deg, rgba(167,181,62,1) 0%, rgba(121,21,9,1) 64%, rgba(0,212,255,1) 100%);
+  box-shadow: 10px 10px 10px 20px coral, 10px 10px 0px 30px pink;
+  color: white;
+  font-family: "Times New Roman", serif;
+  font-weight: bolder;
+  font-size: 18pt;
+  grid-area: five;
+  width: 100%;
+}
+#styled_paragraph{
+  background-color: black;
+  color: red;
+  position: relative;
+}
+#styled_paragraph::before{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 100px;
+  background-color: blue;
+}
+#styled_paragraph::after{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  right: 100px;
+  background-color: pink;
+}
+.email:active{
+  outline: black 10px solid;
+
+}
+.centered{
+  text-align: center;
+  width: 200px;
+  height: auto;
+  /*margin: 10px;*/
+  /*margin: 10px 20px;*/
+  /*margin: 10px 20px 5px 0px;*/
+  /*margin: 20px auto;*/
+  /*padding: 20px;*/
+}
+.women_image{
+  width: 100vw;
+  height: auto;
+  max-width: 700px;
+  min-width: 320px;
+}
+@media screen and (max-width: 768px){
+  .gentleman_color{
+    font-size: 12pt;
+  }
+}
